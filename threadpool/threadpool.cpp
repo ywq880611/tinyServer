@@ -55,6 +55,6 @@ void threadpool<T>::run(){
         m_tasks.pop_front();
         m_locker.unlock();
         if(!task) continue;
-        task();
+        task->process();
     }
 }
